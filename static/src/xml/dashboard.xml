@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<template>
+    <t t-name="crmDashboard">
+        <div class="oh_dashboards">
+            <div class="container-fluid my-5 o_hr_dashboard"/>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4">
+            <form class="form-group">
+                <select id="dashboard_filter" class="form-control">
+                    <option id="this_year" value="this_year">This Year</option>
+                    <option id="this_month" value="this_month" selected="">This Month</option>
+                    <option id="this_week" value="this_week">This Week</option>
+                </select>
+            </form>
+        </div>
+</t>
+<t t-name="MainSection">
+<div class="new">
+    <section class="dashboard_main" id="main_section">
+        <div class="col-sm-12 mb-4">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8">
+                    <h2 class="section-header">CRM Dashboard</h2>
+                </div>
+
+                <!--      Tiles    -->
+                <div class="col-sm-12 mb-3">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-5 lead_count oh-data ">
+                            <div class="oh-card" style="width: 288px;">
+                                <div class="oh-card-body">
+                                    <div class="stat-widget-one">
+                                        <div class="stat-icon" style="background:#baa9b0">
+                                            <i class="fa fa-star"/>
+                                            <div class="stat-content">
+                                                <div class="stat-head">My Lead
+                                                    <div class="stat_count">
+                                                        <span id="templates">
+                                                            <div id="my_lead"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-5 opportunity oh-data">
+                            <div class="oh-card" style="width: 288px;">
+                                <div class="oh-card-body">
+                                    <div class="stat-widget-one">
+                                        <div class="stat-icon" style="background:#baa9b0">
+                                            <i class="fa fa-star"/>
+                                            <div class="stat-content">
+                                                <div class="stat-head">My Opportunity
+                                                    <div class="stat_count">
+                                                        <span id="count">
+                                                            <div id="my_opportunity"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-5 expected-crm oh-data">
+                            <div class="oh-card" style="width: 288px;">
+                                <div class="oh-card-body">
+                                    <div class="stat-widget-one">
+                                        <div class="stat-icon" style="background:#baa9b0">
+                                            <i class="fa fa-star"/>
+                                            <div class="stat-content-expected-revenue">
+                                                <div class="stat-head">Expected Revenue
+                                                    <div class="stat_count">
+                                                        <span id="storable">
+                                                            <div id="expected_revenue"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-5 revenue_crm oh-data">
+                            <div class="oh-card" style="width: 288px;">
+                                <div class="oh-card-body">
+                                    <div class="stat-widget-one">
+                                        <div class="stat-icon" style="background:#baa9b0">
+                                            <i class="fa fa-star"/>
+                                            <div class="stat-content-revenue">
+                                                <div class="stat-head">Revenue
+                                                    <div class="stat_count">
+                                                        <span id="storable">
+                                                            <div id="revenue"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-5 win_crm oh-data" style="margin-top:50px;">
+                            <div class="oh-card" style="width: 288px;">
+                                <div class="oh-card-body">
+                                    <div class="stat-widget-one">
+                                        <div class="stat-icon" style="background:#baa9b0">
+                                            <i class="fa fa-star"/>
+                                            <div class="stat-content-win-ratio">
+                                                <div class="stat-head">Win Ratio
+                                                    <div class="stat_count">
+                                                        <span id="consumable">
+                                                            <div id="win_ratio"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 col-md-3">
+                <canvas class="stage_graph" style="max-width:500px;max-height:500px;"></canvas>
+                <canvas id="year_graph" style="max-width:500px;max-height:500px;"></canvas>
+                <canvas id="month_graph" style="max-width:500px;max-height:500px;"></canvas>
+                <canvas id="week_graph" style="max-width:500px;max-height:500px;"></canvas>
+            </div>
+        </div>
+    </section>
+</div>
+</t>
+        </template>
